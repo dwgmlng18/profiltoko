@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<<<<<<< HEAD
   <meta charset="UTF-8"/>
-=======
-  <meta charset="UTF-8" />
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Toko Serba Ada — Pertanian · Bangunan · Listrik</title>
   <meta name="description" content="Toko serba ada menyediakan kebutuhan pertanian, bahan bangunan, dan alat listrik terlengkap dengan harga terjangkau."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
-<<<<<<< HEAD
 
 <style>
 
@@ -274,113 +269,15 @@ ul{list-style:none}
 <header class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#beranda" class="brand">
-=======
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-<?php
-$stores = [
-  "pertanian" => [
-    "id"      => "pertanian",
-    "icon"    => "🌾",
-    "label"   => "Toko Pertanian",
-    "tagline" => "Solusi Lengkap untuk Lahan Subur",
-    "desc"    => "Kami menyediakan kebutuhan pertanian terlengkap — dari benih unggul, pupuk organik, hingga alat pertanian modern untuk mendukung produktivitas lahan Anda.",
-    "products" => [
-      ["name"=>"Benih Padi Ciherang 1 kg",    "price"=>"Rp 18.000"],
-      ["name"=>"Benih Jagung Hibrida 500 g",   "price"=>"Rp 35.000"],
-      ["name"=>"Benih Cabai TM-999",            "price"=>"Rp 25.000"],
-      ["name"=>"Pupuk Urea 50 kg",              "price"=>"Rp 112.000"],
-      ["name"=>"Pupuk NPK Mutiara 25 kg",       "price"=>"Rp 185.000"],
-      ["name"=>"Pupuk Kompos Organik 20 kg",    "price"=>"Rp 45.000"],
-      ["name"=>"Pestisida Dursban 1 L",         "price"=>"Rp 65.000"],
-      ["name"=>"Herbisida Roundup 1 L",         "price"=>"Rp 55.000"],
-      ["name"=>"Fungisida Antracol 500 g",      "price"=>"Rp 48.000"],
-      ["name"=>"Cangkul Baja Stainless",        "price"=>"Rp 95.000"],
-      ["name"=>"Sprayer Manual 16 L",           "price"=>"Rp 145.000"],
-      ["name"=>"Sabit Bergerigi",               "price"=>"Rp 38.000"],
-      ["name"=>"Selang Irigasi 50 m",           "price"=>"Rp 120.000"],
-      ["name"=>"Mulsa Plastik Hitam Perak",     "price"=>"Rp 85.000"],
-      ["name"=>"Polybag Besar (isi 50)",        "price"=>"Rp 22.000"],
-    ]
-  ],
-  "bangunan" => [
-    "id"      => "bangunan",
-    "icon"    => "🏗️",
-    "label"   => "Toko Bahan Bangunan",
-    "tagline" => "Material Berkualitas, Rumah Impian Terwujud",
-    "desc"    => "Menyediakan berbagai material bangunan berkualitas tinggi untuk konstruksi rumah, gedung, dan renovasi. Kami menjamin produk original dengan harga terjangkau.",
-    "products" => [
-      ["name"=>"Semen Portland 50 kg",          "price"=>"Rp 68.000"],
-      ["name"=>"Bata Merah (per biji)",          "price"=>"Rp 750"],
-      ["name"=>"Bata Hebel 60×20×10 cm",        "price"=>"Rp 9.500"],
-      ["name"=>"Pasir Bangunan (per m³)",        "price"=>"Rp 185.000"],
-      ["name"=>"Batu Split 1–2 cm (per m³)",    "price"=>"Rp 215.000"],
-      ["name"=>"Keramik Lantai 60×60 cm",       "price"=>"Rp 85.000/dos"],
-      ["name"=>"Besi Beton Ø10 mm 12 m",        "price"=>"Rp 95.000"],
-      ["name"=>"Besi Beton Ø12 mm 12 m",        "price"=>"Rp 138.000"],
-      ["name"=>"Kawat Bendrat 1 kg",             "price"=>"Rp 18.000"],
-      ["name"=>"Cat Tembok Dulux 25 kg",         "price"=>"Rp 385.000"],
-      ["name"=>"Cat Kayu Avian 1 kg",            "price"=>"Rp 45.000"],
-      ["name"=>"Pipa PVC AW Ø3/4\" 4 m",        "price"=>"Rp 28.000"],
-      ["name"=>"Triplek 18 mm 122×244 cm",       "price"=>"Rp 285.000"],
-      ["name"=>"Genting Beton (per biji)",       "price"=>"Rp 4.500"],
-      ["name"=>"Waterproofing Sika 4 kg",        "price"=>"Rp 125.000"],
-    ]
-  ],
-  "listrik" => [
-    "id"      => "listrik",
-    "icon"    => "⚡",
-    "label"   => "Toko Alat Listrik",
-    "tagline" => "Instalasi Aman, Rumah Terang Benderang",
-    "desc"    => "Pusat perlengkapan listrik terpercaya. Dari kabel, saklar, MCB, hingga lampu hemat energi — semua tersedia dengan standar keamanan SNI.",
-    "products" => [
-      ["name"=>"Kabel NYM 3×2,5 mm 50 m",      "price"=>"Rp 285.000"],
-      ["name"=>"Kabel NYA 1,5 mm 100 m",        "price"=>"Rp 145.000"],
-      ["name"=>"Stop Kontak 1 Phase Broco",      "price"=>"Rp 15.000"],
-      ["name"=>"Saklar Tunggal Schneider",       "price"=>"Rp 22.000"],
-      ["name"=>"MCB 10A Schneider",              "price"=>"Rp 55.000"],
-      ["name"=>"MCB 16A Schneider",              "price"=>"Rp 65.000"],
-      ["name"=>"Box Panel 4 Group",              "price"=>"Rp 85.000"],
-      ["name"=>"Lampu LED 10W Philips",          "price"=>"Rp 35.000"],
-      ["name"=>"Lampu LED 18W Osram",            "price"=>"Rp 55.000"],
-      ["name"=>"Fitting Lampu E27",              "price"=>"Rp 8.500"],
-      ["name"=>"Pipa Conduit 20 mm 3 m",        "price"=>"Rp 18.000"],
-      ["name"=>"Isolasi Listrik 3M",             "price"=>"Rp 12.000"],
-      ["name"=>"Terminal Block 10 Jalur",        "price"=>"Rp 25.000"],
-      ["name"=>"Steker + Colokan Karet",         "price"=>"Rp 14.000"],
-      ["name"=>"Stabilizer Listrik 1000 VA",     "price"=>"Rp 265.000"],
-    ]
-  ]
-];
-
-$active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
-        ? $_GET['toko']
-        : 'pertanian';
-?>
-
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="index.php" class="brand">
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
       <span class="brand-icon">🏪</span>
       <div class="brand-text">
         <span class="brand-name">TOKO SERBA ADA</span>
         <span class="brand-sub">Pertanian · Bangunan · Listrik</span>
       </div>
     </a>
-<<<<<<< HEAD
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-=======
-
-    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
     <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
       <a href="#beranda" class="nav-link">Beranda</a>
       <a href="#toko"    class="nav-link">Toko</a>
@@ -397,10 +294,6 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
   </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   <div class="hero-content">
     <p class="hero-eyebrow">✦ Satu Atap — Tiga Kebutuhan ✦</p>
     <h1 class="hero-title">Toko <em>Serba Ada</em></h1>
@@ -413,66 +306,16 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
       <a href="#kontak" class="btn btn-outline ripple-host">📞 Hubungi Kami</a>
     </div>
   </div>
-<<<<<<< HEAD
   <div class="hero-badges" id="heroBadges"><!-- filled by JS --></div>
-=======
-
-  <div class="hero-badges">
-    <?php foreach($stores as $s): ?>
-    <div class="hero-badge">
-      <span class="badge-icon"><?= $s['icon'] ?></span>
-      <span><?= $s['label'] ?></span>
-    </div>
-    <?php endforeach; ?>
-  </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
 </section>
 
 <div class="stats-strip">
   <div class="stats-inner">
-<<<<<<< HEAD
     <div class="stat-item"><div class="stat-number"><span class="stat-count" data-target="45">0</span><span>+</span></div><div class="stat-label">Produk Pertanian</div></div>
     <div class="stat-item"><div class="stat-number"><span class="stat-count" data-target="60">0</span><span>+</span></div><div class="stat-label">Bahan Bangunan</div></div>
     <div class="stat-item"><div class="stat-number"><span class="stat-count" data-target="35">0</span><span>+</span></div><div class="stat-label">Alat Listrik</div></div>
     <div class="stat-item"><div class="stat-number"><span class="stat-count" data-target="500">0</span><span>+</span></div><div class="stat-label">Pelanggan Puas</div></div>
     <div class="stat-item"><div class="stat-number"><span class="stat-count" data-target="10">0</span><span>+</span></div><div class="stat-label">Tahun Berpengalaman</div></div>
-=======
-    <div class="stat-item">
-      <div class="stat-number">
-        <span class="stat-count" data-target="45" data-suffix="">0</span>
-        <span>+</span>
-      </div>
-      <div class="stat-label">Produk Pertanian</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">
-        <span class="stat-count" data-target="60" data-suffix="">0</span>
-        <span>+</span>
-      </div>
-      <div class="stat-label">Bahan Bangunan</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">
-        <span class="stat-count" data-target="35" data-suffix="">0</span>
-        <span>+</span>
-      </div>
-      <div class="stat-label">Alat Listrik</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">
-        <span class="stat-count" data-target="500" data-suffix="">0</span>
-        <span>+</span>
-      </div>
-      <div class="stat-label">Pelanggan Puas</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">
-        <span class="stat-count" data-target="10" data-suffix="">0</span>
-        <span>+</span>
-      </div>
-      <div class="stat-label">Tahun Berpengalaman</div>
-    </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   </div>
 </div>
 
@@ -480,73 +323,17 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
   <div class="container">
     <h2 class="section-title">Toko Kami</h2>
     <p class="section-sub">Pilih kategori toko untuk melihat detail dan daftar produk</p>
-<<<<<<< HEAD
     <div class="tab-bar" id="tabBar" role="tablist"></div>
     <div id="storeCard"></div>
-=======
-
-    <div class="tab-bar" role="tablist" aria-label="Pilih toko">
-      <?php foreach($stores as $key => $store): ?>
-      <a href="?toko=<?= $key ?>#toko"
-         class="tab-item ripple-host <?= ($active === $key) ? 'active' : '' ?>"
-         role="tab"
-         aria-selected="<?= ($active === $key) ? 'true' : 'false' ?>">
-        <span class="tab-icon" aria-hidden="true"><?= $store['icon'] ?></span>
-        <span class="tab-label"><?= $store['label'] ?></span>
-      </a>
-      <?php endforeach; ?>
-    </div>
-
-    <?php $s = $stores[$active]; ?>
-    <div class="store-card" role="tabpanel">
-      <div class="store-header">
-        <div class="store-icon-big" aria-hidden="true"><?= $s['icon'] ?></div>
-        <div class="store-info">
-          <h3 class="store-name"><?= htmlspecialchars($s['label']) ?></h3>
-          <p class="store-tagline"><?= htmlspecialchars($s['tagline']) ?></p>
-          <p class="store-desc"><?= htmlspecialchars($s['desc']) ?></p>
-        </div>
-      </div>
-    </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   </div>
 </section>
 
 <section class="section-produk" id="produk">
   <div class="container">
     <h2 class="section-title reveal">Daftar Produk</h2>
-<<<<<<< HEAD
     <p class="section-sub reveal" id="produkSub"></p>
     <div class="products-grid" id="productsGrid"></div>
     <div class="other-stores reveal" id="otherStores"></div>
-=======
-    <p class="section-sub reveal">— <?= htmlspecialchars($s['label']) ?> — <?= count($s['products']) ?> item tersedia</p>
-
-    <div class="products-grid">
-      <?php foreach($s['products'] as $i => $p): ?>
-      <div class="product-card" style="--delay:<?= round($i * 0.035, 3) ?>s">
-        <div class="product-num"><?= str_pad($i+1, 2, '0', STR_PAD_LEFT) ?></div>
-        <div class="product-info">
-          <span class="product-name"><?= htmlspecialchars($p['name']) ?></span>
-          <span class="product-price"><?= htmlspecialchars($p['price']) ?></span>
-        </div>
-        <div class="product-arrow" aria-hidden="true">→</div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-
-    <div class="other-stores reveal">
-      <p>Lihat juga produk toko kami lainnya:</p>
-      <div class="other-btns">
-        <?php foreach($stores as $key => $store):
-          if($key === $active) continue; ?>
-        <a href="?toko=<?= $key ?>#produk" class="btn btn-ghost ripple-host">
-          <?= $store['icon'] ?> <?= htmlspecialchars($store['label']) ?>
-        </a>
-        <?php endforeach; ?>
-      </div>
-    </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   </div>
 </section>
 
@@ -554,33 +341,7 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
   <div class="container">
     <h2 class="section-title reveal">Semua Kategori</h2>
     <p class="section-sub reveal">Gambaran singkat seluruh lini produk kami</p>
-<<<<<<< HEAD
     <div class="all-grid" id="allGrid"></div>
-=======
-
-    <div class="all-grid">
-      <?php foreach($stores as $key => $store): ?>
-      <div class="all-card reveal">
-        <div class="all-card-head">
-          <span class="all-icon" aria-hidden="true"><?= $store['icon'] ?></span>
-          <h3><?= htmlspecialchars($store['label']) ?></h3>
-        </div>
-        <p><?= htmlspecialchars($store['desc']) ?></p>
-        <ul class="all-list">
-          <?php foreach(array_slice($store['products'], 0, 5) as $p): ?>
-          <li>
-            <span><?= htmlspecialchars($p['name']) ?></span>
-            <span><?= htmlspecialchars($p['price']) ?></span>
-          </li>
-          <?php endforeach; ?>
-        </ul>
-        <a href="?toko=<?= $key ?>#produk" class="btn btn-primary btn-sm ripple-host">
-          Lihat Semua (<?= count($store['products']) ?> produk) →
-        </a>
-      </div>
-      <?php endforeach; ?>
-    </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
   </div>
 </section>
 
@@ -588,15 +349,10 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
   <div class="container">
     <h2 class="section-title white reveal">Kontak &amp; Lokasi</h2>
     <p class="section-sub white reveal">Kami siap melayani Anda setiap hari</p>
-<<<<<<< HEAD
-=======
-
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
     <div class="kontak-grid">
       <div class="kontak-info">
         <div class="kontak-block">
           <div class="kontak-icon">📍</div>
-<<<<<<< HEAD
           <div><h4>Alamat</h4><p>Jl. Raya Makmur No. 17, Kecamatan Subur<br>Kabupaten Sejahtera, Jawa Timur 68123</p></div>
         </div>
         <div class="kontak-block">
@@ -605,38 +361,11 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
         </div>
         <div class="kontak-block">
           <div class="kontak-icon">📧</div>
-          <div><h4>Email</h4><p>info@tokoserbaada.id</p></div>
+          <div><h4>Email</h4><p><span class="__cf_email__" data-cfemail="a6cfc8c0c9e6d2c9cdc9d5c3d4c4c7c7c2c788cfc2">[email&#160;protected]</span></p></div>
         </div>
         <div class="kontak-block">
           <div class="kontak-icon">🕐</div>
           <div><h4>Jam Operasional</h4><p>Senin – Sabtu: 07.00 – 18.00 WIB<br>Minggu: 08.00 – 15.00 WIB</p></div>
-=======
-          <div>
-            <h4>Alamat</h4>
-            <p>Jl. Raya Makmur No. 17, Kecamatan Subur<br>Kabupaten Sejahtera, Jawa Timur 68123</p>
-          </div>
-        </div>
-        <div class="kontak-block">
-          <div class="kontak-icon">📞</div>
-          <div>
-            <h4>Telepon &amp; WhatsApp</h4>
-            <p>(0321) 123-4567<br>+62 812-3456-7890</p>
-          </div>
-        </div>
-        <div class="kontak-block">
-          <div class="kontak-icon">📧</div>
-          <div>
-            <h4>Email</h4>
-            <p>info@tokoserbaada.id</p>
-          </div>
-        </div>
-        <div class="kontak-block">
-          <div class="kontak-icon">🕐</div>
-          <div>
-            <h4>Jam Operasional</h4>
-            <p>Senin – Sabtu: 07.00 – 18.00 WIB<br>Minggu: 08.00 – 15.00 WIB</p>
-          </div>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
         </div>
         <div class="sosmed-row">
           <a href="#" class="sosmed-btn ripple-host">📘 Facebook</a>
@@ -644,7 +373,6 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
           <a href="https://wa.me/6281234567890" class="sosmed-btn wa ripple-host" target="_blank" rel="noopener">💬 WhatsApp</a>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="kontak-form-wrap">
         <h3>Kirim Pesan</h3>
         <p class="form-subtitle">Isi form di bawah dan kami akan segera menghubungi Anda</p>
@@ -657,79 +385,22 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
           <div class="form-group">
             <label for="hp">No. HP / WhatsApp <span style="color:#e53">*</span></label>
             <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" required/>
-=======
-
-      <div class="kontak-form-wrap">
-        <h3>Kirim Pesan</h3>
-        <p class="form-subtitle">Isi form di bawah dan kami akan segera menghubungi Anda</p>
-
-        <?php
-        $msg = '';
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kirim'])) {
-          $nama  = htmlspecialchars(trim($_POST['nama']         ?? ''));
-          $hp    = htmlspecialchars(trim($_POST['hp']           ?? ''));
-          $pesan = htmlspecialchars(trim($_POST['pesan']        ?? ''));
-          $toko_i= htmlspecialchars(trim($_POST['toko_inquiry'] ?? ''));
-          if ($nama && $hp && $pesan) {
-            $msg = '<div class="alert-ok">✅ Pesan berhasil dikirim! Kami akan menghubungi Anda segera.</div>';
-          } else {
-            $msg = '<div class="alert-err">⚠️ Harap isi semua kolom yang diperlukan.</div>';
-          }
-        }
-        echo $msg;
-        ?>
-
-        <form method="POST" action="#kontak" class="kontak-form" novalidate>
-          <div class="form-group">
-            <label for="nama">Nama Lengkap <span style="color:#e53">*</span></label>
-            <input type="text" id="nama" name="nama"
-                   placeholder="Contoh: Budi Santoso" required
-                   value="<?= htmlspecialchars($_POST['nama'] ?? '') ?>"/>
-          </div>
-          <div class="form-group">
-            <label for="hp">No. HP / WhatsApp <span style="color:#e53">*</span></label>
-            <input type="tel" id="hp" name="hp"
-                   placeholder="08xxxxxxxxxx" required
-                   value="<?= htmlspecialchars($_POST['hp'] ?? '') ?>"/>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
           </div>
           <div class="form-group">
             <label for="toko_inquiry">Kategori Toko</label>
             <select id="toko_inquiry" name="toko_inquiry">
               <option value="">— Pilih kategori toko —</option>
-<<<<<<< HEAD
               <option value="pertanian">🌾 Toko Pertanian</option>
               <option value="bangunan">🏗️ Toko Bahan Bangunan</option>
               <option value="listrik">⚡ Toko Alat Listrik</option>
               <option value="umum">🏪 Pertanyaan Umum</option>
-=======
-              <?php foreach($stores as $key => $store): ?>
-              <option value="<?= $key ?>"
-                <?= (($_POST['toko_inquiry'] ?? '') === $key) ? 'selected' : '' ?>>
-                <?= $store['icon'] ?> <?= htmlspecialchars($store['label']) ?>
-              </option>
-              <?php endforeach; ?>
-              <option value="umum" <?= (($_POST['toko_inquiry'] ?? '') === 'umum') ? 'selected' : '' ?>>
-                🏪 Pertanyaan Umum
-              </option>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
             </select>
           </div>
           <div class="form-group">
             <label for="pesan">Pesan <span style="color:#e53">*</span></label>
-<<<<<<< HEAD
             <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pertanyaan atau pesanan Anda..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full ripple-host">Kirim Pesan 📤</button>
-=======
-            <textarea id="pesan" name="pesan" rows="4"
-                      placeholder="Tulis pertanyaan atau pesanan Anda..."
-                      required><?= htmlspecialchars($_POST['pesan'] ?? '') ?></textarea>
-          </div>
-          <button type="submit" name="kirim" class="btn btn-primary btn-full ripple-host">
-            Kirim Pesan 📤
-          </button>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
         </form>
       </div>
     </div>
@@ -746,28 +417,15 @@ $active = (isset($_GET['toko']) && array_key_exists($_GET['toko'], $stores))
           <span>Pertanian · Bangunan · Listrik</span>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="footer-links" id="footerLinks"></div>
     </div>
     <div class="footer-bottom">
       <p>© <span id="tahun"></span> Toko Serba Ada. Hak Cipta Dilindungi.</p>
-=======
-      <div class="footer-links">
-        <?php foreach($stores as $key => $store): ?>
-        <a href="?toko=<?= $key ?>#toko"><?= $store['icon'] ?> <?= htmlspecialchars($store['label']) ?></a>
-        <?php endforeach; ?>
-        <a href="#kontak">📞 Kontak</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© <?= date('Y') ?> Toko Serba Ada. Hak Cipta Dilindungi.</p>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
       <p>Melayani dengan sepenuh hati 🌿</p>
     </div>
   </div>
 </footer>
 
-<<<<<<< HEAD
 <a href="#beranda" class="back-top" id="backTop" title="Kembali ke atas" aria-label="Kembali ke atas">↑</a>
 
 <script>
@@ -1111,18 +769,10 @@ function init(){
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded', init);
 } else {
-  init();
+   init();
 }
 
 })();
 </script>
 </body>
 </html>
-=======
-<!-- Back to top -->
-<a href="#beranda" class="back-top" id="backTop" title="Kembali ke atas" aria-label="Kembali ke atas">↑</a>
-
-<script src="main.js"></script>
-</body>
-</html>
->>>>>>> 70595d41258cacf6244ab559ddec375e05e8ee80
