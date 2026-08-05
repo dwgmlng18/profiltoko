@@ -1,747 +1,355 @@
 <!DOCTYPE html>
-<html lang="id" data-bs-theme="light">
+<html lang="id">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Toko Serba Ada — Pertanian · Bangunan · Listrik</title>
-  <meta name="description" content="Toko serba ada menyediakan kebutuhan pertanian, bahan bangunan, dan alat listrik terlengkap."/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UD Makmur Jaya — Toko Obat & Pupuk Pertanian, Bahan Bangunan, Alat Listrik | Sejahtera, Jawa Timur</title>
+<meta name="description" content="UD Makmur Jaya menyediakan obat pertanian, pupuk pertanian, alat & bahan bangunan, serta alat listrik lengkap dengan harga terbaru di Kec. Subur, Kab. Sejahtera, Jawa Timur. Cek stok & harga langsung via WhatsApp." />
+<meta name="keywords" content="toko pertanian, obat pertanian, pupuk pertanian, toko bangunan, bahan bangunan, alat listrik, toko material, UD Makmur Jaya" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="UD Makmur Jaya" />
+<link rel="canonical" href="https://www.udmakmurjaya.id/" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<!-- Open Graph / Twitter Card -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:site_name" content="UD Makmur Jaya" />
+<meta property="og:title" content="UD Makmur Jaya — Sarana Tani & Bangunan" />
+<meta property="og:description" content="Katalog obat pertanian, pupuk pertanian, alat & bahan bangunan, dan alat listrik. Cek harga & stok langsung via WhatsApp." />
+<meta property="og:url" content="https://www.udmakmurjaya.id/" />
+<meta property="og:image" content="https://www.udmakmurjaya.id/assets/img/og-banner.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="UD Makmur Jaya — Sarana Tani & Bangunan" />
+<meta name="twitter:description" content="Katalog obat pertanian, pupuk pertanian, alat & bahan bangunan, dan alat listrik lengkap." />
+<meta name="twitter:image" content="https://www.udmakmurjaya.id/assets/img/og-banner.png" />
 
-  <style>
-    :root {
-      --bs-primary:        #2e7a38;
-      --bs-primary-rgb:    46,122,56;
-      --bs-success:        #3a9645;
-      --bs-success-rgb:    58,150,69;
-      --bs-font-sans-serif: 'DM Sans', system-ui, sans-serif;
-      --green-dark:  #1a3d1f;
-      --green-deep:  #0f2912;
-      --green-mid:   #2e7a38;
-      --green-light: #89ce90;
-      --green-pale:  #f0faf1;
+<!-- Ikon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+<meta name="theme-color" content="#10140f" />
+
+<!-- Font & ikon pihak ketiga -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+<!-- Stylesheet situs -->
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Data terstruktur untuk mesin pencari -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "UD Makmur Jaya",
+  "alternateName": "Toko Makmur Jaya",
+  "description": "Toko sarana pertanian (obat & pupuk pertanian), bahan bangunan, dan alat listrik.",
+  "url": "https://www.udmakmurjaya.id/",
+  "telephone": "+62-321-123456",
+  "priceRange": "Rp750 - Rp385000",
+  "image": "https://www.udmakmurjaya.id/assets/img/og-banner.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Raya Makmur No. 17, Kec. Subur",
+    "addressLocality": "Kabupaten Sejahtera",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "68123",
+    "addressCountry": "ID"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "08:00",
+      "closes": "15:00"
     }
-    body { font-family: var(--bs-font-sans-serif); }
-    .font-display { font-family: 'Playfair Display', Georgia, serif; }
-    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-    .hero-section {
-      background: linear-gradient(150deg, #0c2310 0%, #112914 50%, #0a1e0d 100%);
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-section::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(137,206,144,.12) 1px, transparent 1px);
-      background-size: 44px 44px;
-      animation: dotMove 30s linear infinite;
-    }
-    @keyframes dotMove { to { background-position: 44px 44px; } }
-    .navbar-nav .nav-link.active-link { color: #fff !important; }
-    .navbar-nav .nav-link.active-link::after {
-      content: ''; display: block; height: 2px;
-      background: var(--green-light); border-radius: 2px; margin-top: 2px;
-      animation: none;
-    }
-    .navbar-scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.35) !important; }
-    .text-green-gradient {
-      background: linear-gradient(130deg, #89ce90, #5db866);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .product-card-item {
-      border-left: 3px solid transparent;
-      transition: border-color .22s, transform .18s, box-shadow .22s, background .22s;
-    }
-    .product-card-item:hover {
-      border-left-color: #5db866;
-      transform: translateX(3px) translateY(-2px);
-      background: var(--green-pale) !important;
-      box-shadow: 0 6px 20px rgba(46,122,56,.12) !important;
-    }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .stat-card { transition: transform .22s; }
-    .stat-card:hover { transform: translateY(-4px); }
-    .nav-pills .nav-link.active {
-      background-color: var(--green-mid) !important;
-      box-shadow: 0 4px 16px rgba(46,122,56,.3);
-    }
-    .nav-pills .nav-link:not(.active):hover {
-      background-color: rgba(46,122,56,.1);
-      color: var(--green-mid);
-    }
-    .kontak-block { transition: transform .22s, background .22s, border-color .22s; }
-    .kontak-block:hover { transform: translateX(5px); }
-    .form-control:focus, .form-select:focus {
-      border-color: var(--green-mid);
-      box-shadow: 0 0 0 3px rgba(46,122,56,.15);
-    }
-    #backTop {
-      opacity: 0; transform: translateY(16px) scale(.85);
-      transition: opacity .28s, transform .28s;
-      pointer-events: none;
-    }
-    #backTop.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
-    .all-store-card { transition: transform .26s, box-shadow .26s, border-color .26s; }
-    .all-store-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(46,122,56,.15) !important;
-      border-color: #89ce90 !important;
-    }
-    .hero-badge {
-      backdrop-filter: blur(10px);
-      transition: background .22s, transform .22s, border-color .22s;
-    }
-    .hero-badge:hover {
-      background: rgba(255,255,255,.15) !important;
-      border-color: rgba(137,206,144,.4) !important;
-      transform: translateY(-3px);
-    }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f0faf1; }
-    ::-webkit-scrollbar-thumb { background: #89ce90; border-radius: 3px; }
-    #storeCard { animation: scaleIn .3s ease; }
-    #productsGrid { animation: fadeUp .35s ease; }
-    @keyframes scaleIn { from { opacity:0; transform: scale(.97); } to { opacity:1; transform: scale(1); } }
-    @keyframes fadeUp  { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform: translateY(0); } }
-    @media (prefers-reduced-motion: reduce) {
-      *, .reveal { animation: none !important; transition-duration: .01ms !important; }
-    }
-  </style>
+  ],
+  "sameAs": [
+    "https://wa.me/6281234567890"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Katalog Produk UD Makmur Jaya",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Obat Pertanian" },
+      { "@type": "OfferCatalog", "name": "Pupuk Pertanian" },
+      { "@type": "OfferCatalog", "name": "Alat & Bahan Bangunan" },
+      { "@type": "OfferCatalog", "name": "Alat Listrik" }
+    ]
+  }
+}
+</script>
 </head>
-<body class="bg-light">
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar"
-     style="background:rgba(13,36,16,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(137,206,144,.12);">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#beranda">
-      <span style="font-size:1.8rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))">🏪</span>
-      <div class="lh-sm">
-        <div class="font-display fw-bold text-white" style="font-size:1rem;letter-spacing:.3px">TOKO SERBA ADA</div>
-        <div class="fw-medium" style="font-size:.65rem;color:#89ce90;letter-spacing:.5px">Pertanian · Bangunan · Listrik</div>
-      </div>
+<!-- ============================= TOPBAR ============================= -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="topbar__item"><i class="bi bi-geo-alt"></i> <span>Kec. Subur, Kab. Sejahtera — Jawa Timur</span></span>
+    <span class="topbar__item topbar__hours"><i class="bi bi-clock"></i> <span>Senin–Sabtu 07.00–18.00 · Minggu 08.00–15.00</span></span>
+    <a class="topbar__item" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+      <i class="bi bi-whatsapp"></i> <span>0812-3456-7890</span>
     </a>
-
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"
-            style="box-shadow:none">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto gap-1">
-        <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#beranda">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#toko">Toko</a></li>
-        <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#produk">Produk</a></li>
-        <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#semua">Kategori</a></li>
-        <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#kontak">Kontak</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<section class="hero-section d-flex flex-column align-items-center justify-content-center text-center px-3 pt-5 pb-4" id="beranda">
-  <div class="container position-relative" style="z-index:2">
-    <span class="badge rounded-pill fw-semibold mb-4 d-inline-block"
-          style="background:rgba(137,206,144,.12);border:1px solid rgba(137,206,144,.32);color:#89ce90;font-size:.75rem;letter-spacing:2.5px;padding:.45rem 1.1rem">
-      ✦ SATU ATAP — TIGA KEBUTUHAN ✦
-    </span>
-
-    <h1 class="font-display fw-bold text-white mb-3 lh-sm"
-        style="font-size:clamp(2.8rem,7vw,5.5rem);letter-spacing:-1.5px">
-      Toko <span class="text-green-gradient">Serba Ada</span>
-    </h1>
-
-    <p class="mx-auto mb-4" style="max-width:560px;color:rgba(255,255,255,.65);font-size:clamp(.92rem,1.8vw,1.08rem);line-height:1.78">
-      Solusi lengkap untuk kebutuhan <strong style="color:#89ce90">pertanian</strong>,
-      <strong style="color:#89ce90">bahan bangunan</strong>, dan
-      <strong style="color:#89ce90">alat listrik</strong> Anda.
-      Kualitas terjamin, harga bersahabat, pelayanan ramah.
-    </p>
-
-    <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
-      <a href="#produk" class="btn btn-lg rounded-pill fw-semibold px-4"
-         style="background:var(--green-mid);color:#fff;border:2px solid var(--green-mid);box-shadow:0 4px 16px rgba(46,122,56,.35)">
-        <i class="bi bi-cart3 me-2"></i>Lihat Produk
-      </a>
-      <a href="#kontak" class="btn btn-lg rounded-pill fw-semibold px-4"
-         style="background:rgba(255,255,255,.08);color:#fff;border:2px solid rgba(255,255,255,.5);backdrop-filter:blur(6px)">
-        <i class="bi bi-telephone me-2"></i>Hubungi Kami
-      </a>
-    </div>
-
-    <div class="d-flex flex-wrap gap-3 justify-content-center" id="heroBadges"></div>
-  </div>
-</section>
-
-<div style="background:#1a3d1f;border-top:1px solid rgba(137,206,144,.15)">
-  <div class="container py-4">
-    <div class="row g-3 text-center" id="statsRow">
-      <div class="col-6 col-md stat-card">
-        <div class="font-display fw-bold text-white" style="font-size:2.4rem;line-height:1">
-          <span class="stat-count" data-target="45">0</span><span style="color:#89ce90">+</span>
-        </div>
-        <div style="color:#b8e4bc;font-size:.84rem;font-weight:500">Produk Pertanian</div>
-      </div>
-      <div class="col-6 col-md stat-card">
-        <div class="font-display fw-bold text-white" style="font-size:2.4rem;line-height:1">
-          <span class="stat-count" data-target="60">0</span><span style="color:#89ce90">+</span>
-        </div>
-        <div style="color:#b8e4bc;font-size:.84rem;font-weight:500">Bahan Bangunan</div>
-      </div>
-      <div class="col-6 col-md stat-card">
-        <div class="font-display fw-bold text-white" style="font-size:2.4rem;line-height:1">
-          <span class="stat-count" data-target="35">0</span><span style="color:#89ce90">+</span>
-        </div>
-        <div style="color:#b8e4bc;font-size:.84rem;font-weight:500">Alat Listrik</div>
-      </div>
-      <div class="col-6 col-md stat-card">
-        <div class="font-display fw-bold text-white" style="font-size:2.4rem;line-height:1">
-          <span class="stat-count" data-target="500">0</span><span style="color:#89ce90">+</span>
-        </div>
-        <div style="color:#b8e4bc;font-size:.84rem;font-weight:500">Pelanggan Puas</div>
-      </div>
-      <div class="col-6 col-md stat-card">
-        <div class="font-display fw-bold text-white" style="font-size:2.4rem;line-height:1">
-          <span class="stat-count" data-target="10">0</span><span style="color:#89ce90">+</span>
-        </div>
-        <div style="color:#b8e4bc;font-size:.84rem;font-weight:500">Tahun Berpengalaman</div>
-      </div>
-    </div>
   </div>
 </div>
 
-<section class="py-5 bg-white reveal" id="toko">
-  <div class="container">
-    <h2 class="font-display fw-bold text-center mb-2" style="color:#1a3d1f">Toko Kami</h2>
-    <p class="text-center mb-4" style="color:#6b826c">Pilih kategori toko untuk melihat detail dan daftar produk</p>
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand__mark">UD</span>
+      <span class="brand__text">
+        <span class="brand__name">MAKMUR JAYA</span>
+        <span class="brand__tagline">Sarana Tani &amp; Bangunan</span>
+      </span>
+    </a>
 
-    <div class="d-flex justify-content-center mb-4">
-      <ul class="nav nav-pills p-2 rounded-pill gap-2" id="storeTabs"
-          style="background:#eff5ef;border:1.5px solid #dde8dd">
+    <nav class="site-nav" id="siteNav" aria-label="Navigasi utama">
+      <ul class="site-nav__list">
+        <li><a href="#top">Beranda</a></li>
+        <li><a href="#katalog">Katalog</a></li>
+        <li><a href="#semua-rak">Semua Rak</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a class="site-nav__cta" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Chat WhatsApp</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div id="storeCard"></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="siteNav">
+      <i class="bi bi-list" aria-hidden="true"></i>
+    </button>
   </div>
-</section>
+</header>
 
-<section class="py-5" style="background:#f8faf8" id="produk">
-  <div class="container">
-    <h2 class="font-display fw-bold text-center mb-2 reveal" style="color:#1a3d1f">Daftar Produk</h2>
-    <p class="text-center mb-4 reveal" id="produkSub" style="color:#6b826c"></p>
-    <div class="row g-3" id="productsGrid"></div>
-    <div class="text-center mt-4 reveal" id="otherStores"></div>
-  </div>
-</section>
-
-<section class="py-5 bg-white" id="semua">
-  <div class="container">
-    <h2 class="font-display fw-bold text-center mb-2 reveal" style="color:#1a3d1f">Semua Kategori</h2>
-    <p class="text-center mb-4 reveal" style="color:#6b826c">Gambaran singkat seluruh lini produk kami</p>
-    <div class="row g-4" id="allGrid"></div>
-  </div>
-</section>
-
-<section class="py-5" id="kontak"
-  style="background:linear-gradient(150deg,#0d2410 0%,#0f2914 100%)">
-  <div class="container">
-    <h2 class="font-display fw-bold text-center text-white mb-2 reveal">Kontak &amp; Lokasi</h2>
-    <p class="text-center mb-5 reveal" style="color:#b8e4bc">Kami siap melayani Anda setiap hari</p>
-
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-5">
-        <div class="d-flex flex-column gap-3">
-
-          <div class="kontak-block d-flex gap-3 align-items-start rounded-3 p-3"
-               style="background:rgba(255,255,255,.04);border:1px solid rgba(137,206,144,.12)">
-            <div class="flex-shrink-0 rounded-3 d-flex align-items-center justify-content-center"
-                 style="width:44px;height:44px;background:rgba(137,206,144,.12);border:1px solid rgba(137,206,144,.2);font-size:1.3rem">📍</div>
-            <div>
-              <div class="fw-semibold mb-1" style="color:#89ce90;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px">Alamat</div>
-              <div style="color:rgba(255,255,255,.73);font-size:.875rem;line-height:1.6">
-                Jl. Raya Makmur No. 17, Kecamatan Subur<br>Kabupaten Sejahtera, Jawa Timur 68123
-              </div>
-            </div>
-          </div>
-
-          <div class="kontak-block d-flex gap-3 align-items-start rounded-3 p-3"
-               style="background:rgba(255,255,255,.04);border:1px solid rgba(137,206,144,.12)">
-            <div class="flex-shrink-0 rounded-3 d-flex align-items-center justify-content-center"
-                 style="width:44px;height:44px;background:rgba(137,206,144,.12);border:1px solid rgba(137,206,144,.2);font-size:1.3rem">📞</div>
-            <div>
-              <div class="fw-semibold mb-1" style="color:#89ce90;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px">Telepon &amp; WhatsApp</div>
-              <div style="color:rgba(255,255,255,.73);font-size:.875rem;line-height:1.6">
-                (0321) 123-4567<br>+62 812-3456-7890
-              </div>
-            </div>
-          </div>
-
-          <div class="kontak-block d-flex gap-3 align-items-start rounded-3 p-3"
-               style="background:rgba(255,255,255,.04);border:1px solid rgba(137,206,144,.12)">
-            <div class="flex-shrink-0 rounded-3 d-flex align-items-center justify-content-center"
-                 style="width:44px;height:44px;background:rgba(137,206,144,.12);border:1px solid rgba(137,206,144,.2);font-size:1.3rem">📧</div>
-            <div>
-              <div class="fw-semibold mb-1" style="color:#89ce90;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px">Email</div>
-              <div style="color:rgba(255,255,255,.73);font-size:.875rem">info@tokoserbaada.id</div>
-            </div>
-          </div>
-
-          <div class="kontak-block d-flex gap-3 align-items-start rounded-3 p-3"
-               style="background:rgba(255,255,255,.04);border:1px solid rgba(137,206,144,.12)">
-            <div class="flex-shrink-0 rounded-3 d-flex align-items-center justify-content-center"
-                 style="width:44px;height:44px;background:rgba(137,206,144,.12);border:1px solid rgba(137,206,144,.2);font-size:1.3rem">🕐</div>
-            <div>
-              <div class="fw-semibold mb-1" style="color:#89ce90;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px">Jam Operasional</div>
-              <div style="color:rgba(255,255,255,.73);font-size:.875rem;line-height:1.6">
-                Senin – Sabtu: 07.00 – 18.00 WIB<br>Minggu: 08.00 – 15.00 WIB
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex flex-wrap gap-2 mt-1">
-            <a href="#" class="btn btn-sm rounded-pill fw-semibold"
-               style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.18);font-size:.78rem">
-              <i class="bi bi-facebook me-1"></i>Facebook
-            </a>
-            <a href="#" class="btn btn-sm rounded-pill fw-semibold"
-               style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.18);font-size:.78rem">
-              <i class="bi bi-instagram me-1"></i>Instagram
-            </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
-               class="btn btn-sm rounded-pill fw-semibold"
-               style="background:rgba(37,211,102,.14);color:rgba(255,255,255,.9);border:1px solid rgba(37,211,102,.35);font-size:.78rem">
-              <i class="bi bi-whatsapp me-1"></i>WhatsApp
-            </a>
-          </div>
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Toko pertanian &amp; bangunan · sejak 2014</p>
+        <h1 class="hero__title">
+          Satu toko,<br />
+          <span>empat rak kebutuhan</span> lengkap.
+        </h1>
+        <p class="hero__desc">
+          Dari obat dan pupuk untuk lahan, sampai bahan bangunan dan alat
+          listrik untuk rumah — semua tersedia dengan harga yang bisa Anda
+          cek sendiri sebelum datang ke toko.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#katalog">
+            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> Lihat Katalog
+          </a>
+          <a class="btn btn--wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i> Tanya via WhatsApp
+          </a>
         </div>
       </div>
 
-      <div class="col-lg-7">
-        <div class="card border-0 shadow-lg" style="border-radius:1.5rem">
-          <div class="card-body p-4 p-lg-5">
-            <h3 class="font-display fw-bold mb-1" style="color:#1a3d1f">Kirim Pesan</h3>
-            <p class="text-muted mb-4" style="font-size:.875rem">Isi form di bawah dan kami akan segera menghubungi Anda</p>
-
-            <div id="formMsg"></div>
-
-            <form id="kontakForm" novalidate>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label fw-semibold small" for="nama">
-                    Nama Lengkap <span class="text-danger">*</span>
-                  </label>
-                  <input type="text" class="form-control" id="nama" placeholder="Contoh: Budi Santoso" required/>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label fw-semibold small" for="hp">
-                    No. HP / WhatsApp <span class="text-danger">*</span>
-                  </label>
-                  <input type="tel" class="form-control" id="hp" placeholder="08xxxxxxxxxx" required/>
-                </div>
-                <div class="col-12">
-                  <label class="form-label fw-semibold small" for="toko_inquiry">Kategori Toko</label>
-                  <select class="form-select" id="toko_inquiry">
-                    <option value="">— Pilih kategori toko —</option>
-                    <option value="pertanian">🌾 Toko Pertanian</option>
-                    <option value="bangunan">🏗️ Toko Bahan Bangunan</option>
-                    <option value="listrik">⚡ Toko Alat Listrik</option>
-                    <option value="umum">🏪 Pertanyaan Umum</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label fw-semibold small" for="pesan">
-                    Pesan <span class="text-danger">*</span>
-                  </label>
-                  <textarea class="form-control" id="pesan" rows="4"
-                            placeholder="Tulis pertanyaan atau pesanan Anda..." required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-lg w-100 rounded-pill fw-semibold"
-                          style="background:var(--green-mid);color:#fff;border:2px solid var(--green-mid);box-shadow:0 4px 16px rgba(46,122,56,.3)">
-                    <i class="bi bi-send me-2"></i>Kirim Pesan
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+      <div class="hero__panel" aria-hidden="true">
+        <p class="hero__panel-label">Susunan rak toko</p>
+        <div class="hero__panel-row"><b>01</b><i class="bi bi-droplet-half"></i> Obat Pertanian</div>
+        <div class="hero__panel-row"><b>02</b><i class="bi bi-flower2"></i> Pupuk Pertanian</div>
+        <div class="hero__panel-row"><b>03</b><i class="bi bi-bricks"></i> Alat &amp; Bahan Bangunan</div>
+        <div class="hero__panel-row"><b>04</b><i class="bi bi-lightning-charge"></i> Alat Listrik</div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="py-4" style="background:#0c1d0d;border-top:1px solid rgba(137,206,144,.08)">
-  <div class="container">
-    <div class="row align-items-center g-3 mb-3 pb-3" style="border-bottom:1px solid rgba(255,255,255,.08)">
-      <div class="col-auto">
-        <div class="d-flex align-items-center gap-2">
-          <span style="font-size:2rem">🏪</span>
-          <div>
-            <div class="font-display fw-bold text-white" style="font-size:.95rem">TOKO SERBA ADA</div>
-            <div style="color:rgba(255,255,255,.38);font-size:.73rem">Pertanian · Bangunan · Listrik</div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="d-flex flex-wrap gap-3 justify-content-lg-end" id="footerLinks"></div>
-      </div>
-    </div>
-    <div class="d-flex flex-wrap justify-content-between gap-2">
-      <p class="mb-0" style="color:rgba(255,255,255,.28);font-size:.77rem">
-        © <span id="tahun"></span> Toko Serba Ada. Hak Cipta Dilindungi.
+<div class="stripe-bar" aria-hidden="true"></div>
+
+<!-- ========================= STRIP STATISTIK ========================= -->
+<section class="stat-strip">
+  <ul class="stat-strip__list wrap">
+    <li class="stat-strip__item">
+      <div class="stat-strip__num">50<span>+</span></div>
+      <div class="stat-strip__label">Jenis Obat &amp; Pupuk</div>
+    </li>
+    <li class="stat-strip__item">
+      <div class="stat-strip__num">60<span>+</span></div>
+      <div class="stat-strip__label">Bahan Bangunan</div>
+    </li>
+    <li class="stat-strip__item">
+      <div class="stat-strip__num">35<span>+</span></div>
+      <div class="stat-strip__label">Perlengkapan Listrik</div>
+    </li>
+    <li class="stat-strip__item">
+      <div class="stat-strip__num">10<span>+</span></div>
+      <div class="stat-strip__label">Tahun Beroperasi</div>
+    </li>
+  </ul>
+</section>
+
+<!-- ============================ KATALOG ============================= -->
+<section class="section section--catalog" id="katalog">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Katalog produk</p>
+      <h2 class="section-heading">Pilih rak, lihat daftar barangnya</h2>
+      <p class="section-lede">
+        Klik salah satu rak di bawah untuk melihat produk, satuan, dan
+        harga terbaru. Tidak menemukan barang yang dicari? Ketik nama
+        barangnya di kolom pencarian.
       </p>
-      <p class="mb-0" style="color:rgba(255,255,255,.28);font-size:.77rem">Melayani dengan sepenuh hati 🌿</p>
     </div>
+
+    <nav class="rak-nav" id="rakNav" aria-label="Pilih kategori rak"></nav>
+    <div id="categoryPanel"></div>
+
+    <div class="catalog-toolbar">
+      <div class="search-box">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input type="search" id="productSearch" placeholder="Cari nama produk di rak ini…" aria-label="Cari produk" />
+      </div>
+    </div>
+
+    <ul class="product-grid" id="productGrid" aria-live="polite"></ul>
+    <p class="product-empty" id="productEmpty" hidden></p>
+  </div>
+</section>
+
+<!-- ========================== SEMUA RAK (overview) ========================== -->
+<section class="section" id="semua-rak">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Gambaran lengkap</p>
+      <h2 class="section-heading">Semua rak dalam satu pandangan</h2>
+      <p class="section-lede">Ringkasan empat kategori utama yang tersedia di toko kami.</p>
+    </div>
+    <ul class="overview-grid" id="overviewGrid"></ul>
+  </div>
+</section>
+
+<!-- ============================= KONTAK ============================= -->
+<section class="section section--contact" id="kontak">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--green)">Hubungi kami</p>
+      <h2 class="section-heading">Datang langsung atau chat dulu</h2>
+      <p class="section-lede" style="color:rgba(255,255,255,.7)">
+        Untuk cek stok cepat, chat WhatsApp biasanya paling praktis.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="contact-item__icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
+            <span>
+              <span class="contact-item__label">Alamat</span>
+              <span class="contact-item__value">
+                <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Raya+Makmur+No.+17+Kec.+Subur+Kab.+Sejahtera+Jawa+Timur" target="_blank" rel="noopener">
+                  Jl. Raya Makmur No. 17, Kec. Subur<br />Kab. Sejahtera, Jawa Timur 68123
+                </a>
+              </span>
+            </span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+            <span>
+              <span class="contact-item__label">Telepon &amp; WhatsApp</span>
+              <span class="contact-item__value">
+                (0321) 123-456<br />
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a>
+              </span>
+            </span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+            <span>
+              <span class="contact-item__label">Email</span>
+              <span class="contact-item__value">
+                <a href="mailto:info@udmakmurjaya.id">info@udmakmurjaya.id</a>
+              </span>
+            </span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon"><i class="bi bi-clock" aria-hidden="true"></i></span>
+            <span>
+              <span class="contact-item__label">Jam Operasional</span>
+              <span class="contact-item__value">
+                Senin – Sabtu: 07.00 – 18.00 WIB<br />
+                Minggu: 08.00 – 15.00 WIB
+              </span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="contact-social">
+          <a href="#" rel="noopener"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a>
+          <a href="#" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a>
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Kirim Pesan</h3>
+        <p class="contact-card__sub">Pesan Anda akan diteruskan lewat WhatsApp ke toko kami.</p>
+
+        <p class="form-status" id="formStatus" role="status"></p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row--split">
+            <div class="form-row">
+              <label for="fNama">Nama Lengkap *</label>
+              <input type="text" id="fNama" placeholder="Contoh: Budi Santoso" required />
+            </div>
+            <div class="form-row">
+              <label for="fHp">No. HP / WhatsApp *</label>
+              <input type="tel" id="fHp" placeholder="08xxxxxxxxxx" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="fKategori">Kategori Rak</label>
+            <select id="fKategori">
+              <option value="">— Pilih kategori —</option>
+              <option value="obat-pertanian">Obat Pertanian</option>
+              <option value="pupuk-pertanian">Pupuk Pertanian</option>
+              <option value="bahan-bangunan">Alat &amp; Bahan Bangunan</option>
+              <option value="alat-listrik">Alat Listrik</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="fPesan">Pesan *</label>
+            <textarea id="fPesan" rows="4" placeholder="Tulis pertanyaan atau pesanan Anda…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid btn--full">
+            <i class="bi bi-send" aria-hidden="true"></i> Kirim ke WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-store-year></span> UD Makmur Jaya. Seluruh hak dilindungi.</span>
+    <nav class="footer-links" aria-label="Tautan footer">
+      <a href="#katalog">Katalog</a>
+      <a href="#semua-rak">Semua Rak</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
   </div>
 </footer>
 
-<a href="#beranda" id="backTop" class="btn rounded-circle position-fixed d-flex align-items-center justify-content-center fw-bold"
-   style="bottom:1.5rem;right:1.5rem;width:46px;height:46px;background:var(--green-mid);color:#fff;border:none;box-shadow:0 4px 16px rgba(46,122,56,.4);z-index:1050;font-size:1.1rem">
-  <i class="bi bi-arrow-up"></i>
+<a href="#top" class="back-top" id="backTop" aria-label="Kembali ke atas">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
 </a>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-(function(){
-'use strict';
-
-const STORES = {
-  pertanian:{
-    id:'pertanian', icon:'🌾',
-    label:'Toko Pertanian',
-    tagline:'Solusi Lengkap untuk Lahan Subur',
-    desc:'Kami menyediakan kebutuhan pertanian terlengkap — dari benih unggul, pupuk organik, hingga alat pertanian modern untuk mendukung produktivitas lahan Anda.',
-    color:'#2e7a38',
-    products:[
-      {name:'Benih Padi Ciherang 1 kg',    price:'Rp 18.000'},
-      {name:'Benih Jagung Hibrida 500 g',   price:'Rp 35.000'},
-      {name:'Benih Cabai TM-999',           price:'Rp 25.000'},
-      {name:'Pupuk Urea 50 kg',             price:'Rp 112.000'},
-      {name:'Pupuk NPK Mutiara 25 kg',      price:'Rp 185.000'},
-      {name:'Pupuk Kompos Organik 20 kg',   price:'Rp 45.000'},
-      {name:'Pestisida Dursban 1 L',        price:'Rp 65.000'},
-      {name:'Herbisida Roundup 1 L',        price:'Rp 55.000'},
-      {name:'Fungisida Antracol 500 g',     price:'Rp 48.000'},
-      {name:'Cangkul Baja Stainless',       price:'Rp 95.000'},
-      {name:'Sprayer Manual 16 L',          price:'Rp 145.000'},
-      {name:'Sabit Bergerigi',              price:'Rp 38.000'},
-      {name:'Selang Irigasi 50 m',          price:'Rp 120.000'},
-      {name:'Mulsa Plastik Hitam Perak',    price:'Rp 85.000'},
-      {name:'Polybag Besar (isi 50)',       price:'Rp 22.000'},
-    ]
-  },
-  bangunan:{
-    id:'bangunan', icon:'🏗️',
-    label:'Toko Bahan Bangunan',
-    tagline:'Material Berkualitas, Rumah Impian Terwujud',
-    desc:'Menyediakan berbagai material bangunan berkualitas tinggi untuk konstruksi rumah, gedung, dan renovasi. Kami menjamin produk original dengan harga terjangkau.',
-    color:'#245c2b',
-    products:[
-      {name:'Semen Portland 50 kg',         price:'Rp 68.000'},
-      {name:'Bata Merah (per biji)',         price:'Rp 750'},
-      {name:'Bata Hebel 60×20×10 cm',       price:'Rp 9.500'},
-      {name:'Pasir Bangunan (per m³)',       price:'Rp 185.000'},
-      {name:'Batu Split 1–2 cm (per m³)',   price:'Rp 215.000'},
-      {name:'Keramik Lantai 60×60 cm',      price:'Rp 85.000/dos'},
-      {name:'Besi Beton Ø10 mm 12 m',       price:'Rp 95.000'},
-      {name:'Besi Beton Ø12 mm 12 m',       price:'Rp 138.000'},
-      {name:'Kawat Bendrat 1 kg',            price:'Rp 18.000'},
-      {name:'Cat Tembok Dulux 25 kg',        price:'Rp 385.000'},
-      {name:'Cat Kayu Avian 1 kg',           price:'Rp 45.000'},
-      {name:'Pipa PVC AW Ø3/4" 4 m',        price:'Rp 28.000'},
-      {name:'Triplek 18 mm 122×244 cm',      price:'Rp 285.000'},
-      {name:'Genting Beton (per biji)',      price:'Rp 4.500'},
-      {name:'Waterproofing Sika 4 kg',       price:'Rp 125.000'},
-    ]
-  },
-  listrik:{
-    id:'listrik', icon:'⚡',
-    label:'Toko Alat Listrik',
-    tagline:'Instalasi Aman, Rumah Terang Benderang',
-    desc:'Pusat perlengkapan listrik terpercaya. Dari kabel, saklar, MCB, hingga lampu hemat energi — semua tersedia dengan standar keamanan SNI.',
-    color:'#1a3d1f',
-    products:[
-      {name:'Kabel NYM 3×2,5 mm 50 m',     price:'Rp 285.000'},
-      {name:'Kabel NYA 1,5 mm 100 m',       price:'Rp 145.000'},
-      {name:'Stop Kontak 1 Phase Broco',     price:'Rp 15.000'},
-      {name:'Saklar Tunggal Schneider',      price:'Rp 22.000'},
-      {name:'MCB 10A Schneider',             price:'Rp 55.000'},
-      {name:'MCB 16A Schneider',             price:'Rp 65.000'},
-      {name:'Box Panel 4 Group',             price:'Rp 85.000'},
-      {name:'Lampu LED 10W Philips',         price:'Rp 35.000'},
-      {name:'Lampu LED 18W Osram',           price:'Rp 55.000'},
-      {name:'Fitting Lampu E27',             price:'Rp 8.500'},
-      {name:'Pipa Conduit 20 mm 3 m',       price:'Rp 18.000'},
-      {name:'Isolasi Listrik 3M',            price:'Rp 12.000'},
-      {name:'Terminal Block 10 Jalur',       price:'Rp 25.000'},
-      {name:'Steker + Colokan Karet',        price:'Rp 14.000'},
-      {name:'Stabilizer Listrik 1000 VA',    price:'Rp 265.000'},
-    ]
-  }
-};
-
-const keys = Object.keys(STORES);
-let active = 'pertanian';
-
-function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
-function $(s){ return document.querySelector(s); }
-function $$(s){ return [...document.querySelectorAll(s)]; }
-
-function renderBadges(){
-  $('#heroBadges').innerHTML = keys.map(k=>`
-    <div class="hero-badge d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2"
-         style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.82);font-size:.86rem;font-weight:500">
-      <span style="font-size:1.15rem">${STORES[k].icon}</span>
-      <span>${esc(STORES[k].label)}</span>
-    </div>`).join('');
-}
-
-function renderTabs(){
-  $('#storeTabs').innerHTML = keys.map(k=>`
-    <li class="nav-item">
-      <button class="nav-link rounded-pill fw-semibold d-flex align-items-center gap-2 ${k===active?'active':''}"
-              data-key="${k}" style="font-size:.87rem;${k===active?'background:#2e7a38!important':''}">
-        <span style="font-size:1.2rem">${STORES[k].icon}</span>
-        <span class="d-none d-sm-inline">${esc(STORES[k].label)}</span>
-      </button>
-    </li>`).join('');
-  $$('#storeTabs button').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      active = btn.dataset.key;
-      renderTabs(); renderStoreCard(); renderProducts();
-      setTimeout(()=>$('#produk').scrollIntoView({behavior:'smooth',block:'start'}),60);
-    });
-  });
-}
-
-function renderStoreCard(){
-  const s = STORES[active];
-  $('#storeCard').innerHTML = `
-    <div class="card border-0 rounded-4 shadow-sm" style="background:linear-gradient(140deg,#f0faf1,#eaf7ea);border:1.5px solid #dff2e1!important">
-      <div class="card-body p-4">
-        <div class="d-flex align-items-start gap-4 flex-wrap">
-          <div style="font-size:4rem;line-height:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.12))">${s.icon}</div>
-          <div class="flex-grow-1">
-            <h3 class="font-display fw-bold mb-1" style="color:#1a3d1f;font-size:1.75rem">${esc(s.label)}</h3>
-            <p class="fw-semibold mb-2" style="color:#2e7a38;font-size:.95rem">${esc(s.tagline)}</p>
-            <p class="mb-0" style="color:#3a4d3b;max-width:620px;line-height:1.72">${esc(s.desc)}</p>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-
-function renderProducts(){
-  const s = STORES[active];
-  $('#produkSub').textContent = `— ${s.label} — ${s.products.length} item tersedia`;
-
-  $('#productsGrid').innerHTML = s.products.map((p,i)=>`
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="product-card-item card border rounded-3 h-100"
-           style="animation-delay:${(i*0.03).toFixed(2)}s;border-color:#dde8dd!important">
-        <div class="card-body d-flex align-items-center gap-3 py-3 px-3">
-          <span class="font-display fw-black" style="color:#b8e4bc;font-size:1.2rem;min-width:26px">${String(i+1).padStart(2,'0')}</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold" style="color:#111d12;font-size:.875rem;line-height:1.35">${esc(p.name)}</div>
-            <div class="fw-bold" style="color:#2e7a38;font-size:.875rem">${esc(p.price)}</div>
-          </div>
-          <i class="bi bi-arrow-right" style="color:#c6d9c6;transition:color .2s,transform .2s"></i>
-        </div>
-      </div>
-    </div>`).join('');
-
-  const others = keys.filter(k=>k!==active);
-  $('#otherStores').innerHTML = `
-    <p class="mb-3" style="color:#6b826c;font-size:.9rem">Lihat juga produk toko kami lainnya:</p>
-    <div class="d-flex gap-2 justify-content-center flex-wrap">
-      ${others.map(k=>`
-        <button class="btn rounded-pill fw-semibold" data-switch="${k}"
-                style="background:#f0faf1;color:#245c2b;border:1.5px solid #b8e4bc;font-size:.87rem">
-          ${STORES[k].icon} ${esc(STORES[k].label)}
-        </button>`).join('')}
-    </div>`;
-
-  $$('#otherStores [data-switch]').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      active=btn.dataset.switch;
-      renderTabs(); renderStoreCard(); renderProducts();
-      $('#produk').scrollIntoView({behavior:'smooth',block:'start'});
-    });
-  });
-  reObserve();
-}
-
-function renderAllGrid(){
-  $('#allGrid').innerHTML = keys.map(k=>{
-    const s = STORES[k];
-    return `
-      <div class="col-12 col-md-4">
-        <div class="all-store-card card border h-100 rounded-4 shadow-sm" style="border-color:#dde8dd!important">
-          <div class="card-body p-4 d-flex flex-column gap-3">
-            <div class="d-flex align-items-center gap-3">
-              <span style="font-size:2.2rem;filter:drop-shadow(0 2px 5px rgba(0,0,0,.12))">${s.icon}</span>
-              <h3 class="font-display fw-bold mb-0" style="color:#1a3d1f;font-size:1.2rem">${esc(s.label)}</h3>
-            </div>
-            <p style="color:#6b826c;font-size:.86rem;line-height:1.65">${esc(s.desc)}</p>
-            <ul class="list-group list-group-flush flex-grow-1 rounded-3 overflow-hidden">
-              ${s.products.slice(0,5).map(p=>`
-                <li class="list-group-item d-flex justify-content-between align-items-center px-2 py-2"
-                    style="font-size:.845rem;border-color:#dde8dd;background:transparent">
-                  <span style="color:#3a4d3b">${esc(p.name)}</span>
-                  <span class="fw-bold ms-2" style="color:#2e7a38;white-space:nowrap;font-size:.82rem">${esc(p.price)}</span>
-                </li>`).join('')}
-            </ul>
-            <button class="btn rounded-pill fw-semibold mt-1" data-switch="${k}"
-                    style="background:#2e7a38;color:#fff;border:2px solid #2e7a38;font-size:.84rem;box-shadow:0 3px 12px rgba(46,122,56,.25)">
-              Lihat Semua (${s.products.length} produk) →
-            </button>
-          </div>
-        </div>
-      </div>`;
-  }).join('');
-
-  $$('#allGrid [data-switch]').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      active=btn.dataset.switch;
-      renderTabs(); renderStoreCard(); renderProducts();
-      setTimeout(()=>$('#produk').scrollIntoView({behavior:'smooth',block:'start'}),60);
-    });
-  });
-}
-
-function renderFooter(){
-  $('#footerLinks').innerHTML = keys.map(k=>`
-    <a href="#toko" data-switch="${k}" style="color:rgba(255,255,255,.42);font-size:.82rem;transition:color .18s">
-      ${STORES[k].icon} ${esc(STORES[k].label)}
-    </a>`).join('') + `<a href="#kontak" style="color:rgba(255,255,255,.42);font-size:.82rem">📞 Kontak</a>`;
-
-  $$('#footerLinks [data-switch]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      e.preventDefault();
-      active=a.dataset.switch;
-      renderTabs(); renderStoreCard(); renderProducts();
-      $('#toko').scrollIntoView({behavior:'smooth',block:'start'});
-    });
-    a.addEventListener('mouseenter',()=>a.style.color='#89ce90');
-    a.addEventListener('mouseleave',()=>a.style.color='rgba(255,255,255,.42)');
-  });
-}
-
-function initScroll(){
-  const nav=$('#navbar'), top=$('#backTop');
-  window.addEventListener('scroll',()=>{
-    nav.classList.toggle('navbar-scrolled', window.scrollY>50);
-    top.classList.toggle('visible', window.scrollY>320);
-  },{passive:true});
-}
-
-function initActiveNav(){
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){
-        const id=en.target.id;
-        $$('.navbar-nav .nav-link').forEach(a=>{
-          const isActive = a.getAttribute('href')==='#'+id;
-          a.style.color = isActive ? '#fff' : '';
-          a.style.fontWeight = isActive ? '600' : '';
-        });
-      }
-    });
-  },{rootMargin:'-40% 0px -55% 0px'});
-  $$('section[id]').forEach(s=>obs.observe(s));
-}
-
-let revealObs;
-function initReveal(){
-  revealObs = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){ en.target.classList.add('visible'); revealObs.unobserve(en.target); }
-    });
-  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-  reObserve();
-}
-function reObserve(){
-  $$('.reveal').forEach(el=>{ if(!el.classList.contains('visible') && revealObs) revealObs.observe(el); });
-}
-
-function initCounters(){
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(!en.isIntersecting) return;
-      obs.unobserve(en.target);
-      const el=en.target.querySelector('.stat-count');
-      if(!el) return;
-      const target=+el.dataset.target;
-      const start=performance.now();
-      const step=now=>{
-        const p=Math.min((now-start)/1400,1);
-        const ease=p===1?1:1-Math.pow(2,-10*p);
-        el.textContent=Math.floor(ease*target);
-        if(p<1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    });
-  },{threshold:.4});
-  $$('.stat-card').forEach(el=>obs.observe(el));
-}
-
-function initForm(){
-  const form=$('#kontakForm'), msg=$('#formMsg');
-  form.addEventListener('submit',e=>{
-    e.preventDefault();
-    const nama=$('#nama').value.trim();
-    const hp=$('#hp').value.trim();
-    const pesan=$('#pesan').value.trim();
-    if(!nama||!hp||!pesan){
-      msg.innerHTML=`<div class="alert alert-warning d-flex align-items-center gap-2 rounded-3 mb-3">
-        <i class="bi bi-exclamation-triangle-fill"></i>
-        <span>Harap isi semua kolom yang diperlukan.</span></div>`;
-      return;
-    }
-    const btn=form.querySelector('[type=submit]');
-    btn.disabled=true;
-    btn.innerHTML='<span class="spinner-border spinner-border-sm me-2"></span>Mengirim...';
-    setTimeout(()=>{
-      msg.innerHTML=`<div class="alert alert-success d-flex align-items-center gap-2 rounded-3 mb-3">
-        <i class="bi bi-check-circle-fill"></i>
-        <span>Pesan berhasil dikirim! Kami akan menghubungi Anda segera.</span></div>`;
-      form.reset();
-      btn.disabled=false;
-      btn.innerHTML='<i class="bi bi-send me-2"></i>Kirim Pesan';
-      msg.scrollIntoView({behavior:'smooth',block:'nearest'});
-    },900);
-  });
-}
-
-function setYear(){ $('#tahun').textContent=new Date().getFullYear(); }
-
-function init(){
-  setYear();
-  renderBadges();
-  renderTabs();
-  renderStoreCard();
-  renderProducts();
-  renderAllGrid();
-  renderFooter();
-  initReveal();
-  initScroll();
-  initActiveNav();
-  initCounters();
-  initForm();
-  setTimeout(reObserve,150);
-}
-
-document.readyState==='loading'
-  ? document.addEventListener('DOMContentLoaded', init)
-  : init();
-
-})();
-</script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
