@@ -1,7 +1,7 @@
 /**
  * data.js
  * -----------------------------------------------------------------------
- * Data katalog UD Makmur Jaya. Murni data — tidak ada logic tampilan di
+ * Data katalog UD Sarana Agro Makmur (SAM). Murni data — tidak ada logic
  * sini. Kalau suatu saat datanya diambil dari backend/API, cukup ganti
  * isi CATALOG ini (atau fetch dari endpoint) tanpa menyentuh app.js.
  *
@@ -116,12 +116,13 @@ const CATALOG = [
 
 // Info toko — dipakai di beberapa tempat (kontak, JSON-LD, footer) lewat app.js
 const STORE_INFO = {
-  nama: "UD Makmur Jaya",
+  nama: "UD Sarana Agro Makmur",
+  singkatan: "SAM",
   tagline: "Sarana Tani & Bangunan",
   alamat: "Jl. Raya Makmur No. 17, Kec. Subur, Kab. Sejahtera, Jawa Timur 68123",
   telepon: "0321-123456",
   whatsapp: "6281234567890",
-  email: "info@udmakmurjaya.id",
+  email: "info@saranaagromakmur.id",
   jamOperasional: [
     { hari: "Senin – Sabtu", jam: "07.00 – 18.00 WIB" },
     { hari: "Minggu", jam: "08.00 – 15.00 WIB" },

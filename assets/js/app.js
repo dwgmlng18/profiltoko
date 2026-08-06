@@ -1,9 +1,10 @@
 /**
- * app.js
+ * app.js — UD Sarana Agro Makmur (SAM)
  * -----------------------------------------------------------------------
- * Semua logic interaktif halaman: render katalog, ganti rak/kategori,
- * pencarian produk, navigasi mobile, scroll-reveal, dan form kontak
- * (dikirim lewat WhatsApp karena situs ini belum punya backend sendiri).
+ * Semua logic interaktif halaman: loading screen, progress bar scroll,
+ * render katalog, ganti rak/kategori, pencarian produk, navigasi mobile,
+ * animasi reveal + hitung angka saat scroll, dan form kontak (dikirim
+ * lewat WhatsApp karena situs ini murni katalog, tanpa backend/keranjang).
  *
  * Bergantung pada CATALOG & STORE_INFO dari data.js — muat data.js
  * SEBELUM app.js di index.html.
@@ -20,6 +21,49 @@
 
   let activeCategory = CATALOG[0].id;
   let searchTerm = "";
+
+  // ---------------------------------------------------------------------
+  // LOADING SCREEN — tampil sebentar saat halaman pertama dibuka
+  // ---------------------------------------------------------------------
+  function initLoader() {
+    const loader = qs("#pageLoader");
+    if (!loader) return;
+    document.body.classList.add("is-loading");
+
+    const hide = () => {
+      loader.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+    };
+
+    // Beri jeda minimum supaya animasi terlihat (bukan sekadar berkedip),
+    // tapi tetap menunggu semua aset (font, gambar) selesai dimuat.
+    const minDelay = new Promise((res) => setTimeout(res, 650));
+    const pageReady = new Promise((res) => {
+      if (document.readyState === "complete") res();
+      else window.addEventListener("load", res, { once: true });
+    });
+    Promise.all([minDelay, pageReady]).then(hide);
+
+    // Jaring pengaman: jangan sampai loader nyangkut kalau ada aset lambat
+    setTimeout(hide, 4000);
+  }
+
+  // ---------------------------------------------------------------------
+  // PROGRESS BAR SCROLL
+  // ---------------------------------------------------------------------
+  function initScrollProgress() {
+    const bar = qs("#scrollProgress");
+    if (!bar) return;
+    const update = () => {
+      const scrollTop = window.scrollY;
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      bar.style.width = pct + "%";
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+  }
 
   // ---------------------------------------------------------------------
   // RENDER: tab rak/kategori
@@ -42,16 +86,18 @@
     }).join("");
 
     qsa("[data-cat]", nav).forEach((btn) => {
-      btn.addEventListener("click", () => {
-        activeCategory = btn.dataset.cat;
-        searchTerm = "";
-        const search = qs("#productSearch");
-        if (search) search.value = "";
-        renderTabs();
-        renderCategoryPanel();
-        renderProducts();
-      });
+      btn.addEventListener("click", () => selectCategory(btn.dataset.cat));
     });
+  }
+
+  function selectCategory(id) {
+    activeCategory = id;
+    searchTerm = "";
+    const search = qs("#productSearch");
+    if (search) search.value = "";
+    renderTabs();
+    renderCategoryPanel();
+    renderProducts();
   }
 
   // ---------------------------------------------------------------------
@@ -71,7 +117,8 @@
   }
 
   // ---------------------------------------------------------------------
-  // RENDER: daftar produk kategori aktif (+ pencarian)
+  // RENDER: daftar produk kategori aktif (+ pencarian). Katalog murni —
+  // tidak ada tombol tambah keranjang, hanya CTA tanya via WhatsApp.
   // ---------------------------------------------------------------------
   function renderProducts() {
     const cat = CATALOG.find((c) => c.id === activeCategory);
@@ -85,6 +132,7 @@
 
     if (items.length === 0) {
       grid.innerHTML = "";
+      grid.classList.remove("stagger", "is-visible");
       empty.hidden = false;
       empty.textContent = `Tidak ada produk "${searchTerm}" di rak ${cat.rak}.`;
       return;
@@ -93,23 +141,54 @@
 
     grid.innerHTML = items
       .map((p, i) => {
+        const kode = `${cat.rak}-${String(i + 1).padStart(2, "0")}`;
         const waText = encodeURIComponent(
-          `Halo ${STORE_INFO.nama}, saya mau tanya stok & harga:\n${p.nama} (${p.satuan}) — kode rak ${cat.rak}-${String(i + 1).padStart(2, "0")}`
+          `Halo ${STORE_INFO.nama}, saya mau tanya stok & harga:\n${p.nama} (${p.satuan}) — kode ${kode}`
         );
         return `
-        <li class="price-tag">
-          <span class="price-tag__code">${cat.rak}-${String(i + 1).padStart(2, "0")}</span>
-          <span class="price-tag__name">${p.nama}</span>
-          <span class="price-tag__unit">${p.satuan}</span>
-          <span class="price-tag__price">${rupiah(p.harga)}</span>
-          <a class="price-tag__cta"
+        <li class="product-card">
+          <span class="product-card__code">${kode}</span>
+          <span class="product-card__name">${p.nama}</span>
+          <span class="product-card__unit">${p.satuan}</span>
+          <span class="product-card__price">${rupiah(p.harga)}</span>
+          <span class="product-card__stock"><i class="bi bi-check-circle-fill"></i> Stok Tersedia</span>
+          <a class="product-card__cta"
              href="https://wa.me/${STORE_INFO.whatsapp}?text=${waText}"
              target="_blank" rel="noopener">
-            Tanya stok <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <i class="bi bi-whatsapp" aria-hidden="true"></i> Tanya Stok
           </a>
         </li>`;
       })
       .join("");
+
+    // Re-trigger animasi stagger tiap kali daftar berganti
+    grid.classList.remove("stagger", "is-visible");
+    void grid.offsetWidth; // reflow paksa
+    grid.classList.add("stagger");
+    requestAnimationFrame(() => grid.classList.add("is-visible"));
+  }
+
+  // ---------------------------------------------------------------------
+  // RENDER: ubin "Kategori Populer"
+  // ---------------------------------------------------------------------
+  function renderCategoryTiles() {
+    const el = qs("#catTiles");
+    if (!el) return;
+    el.innerHTML = CATALOG.map((cat) => `
+      <li>
+        <button type="button" class="cat-tile" data-cat="${cat.id}">
+          <span class="cat-tile__icon"><i class="bi bi-${cat.icon}" aria-hidden="true"></i></span>
+          <span class="cat-tile__name">${cat.nama}</span>
+          <span class="cat-tile__count">${cat.produk.length} produk</span>
+        </button>
+      </li>`).join("");
+
+    qsa("[data-cat]", el).forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectCategory(btn.dataset.cat);
+        qs("#katalog").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
   }
 
   // ---------------------------------------------------------------------
@@ -132,17 +211,25 @@
 
     qsa("[data-cat]", qs("#overviewGrid")).forEach((btn) => {
       btn.addEventListener("click", () => {
-        activeCategory = btn.dataset.cat;
-        renderTabs();
-        renderCategoryPanel();
-        renderProducts();
+        selectCategory(btn.dataset.cat);
+        qs("#katalog").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  // Link cepat di category-bar bawah header (data-jump="<id-kategori>")
+  function initCategoryBarLinks() {
+    qsa(".category-bar__list a[data-jump]").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        selectCategory(link.dataset.jump);
         qs("#katalog").scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
   }
 
   // ---------------------------------------------------------------------
-  // Pencarian produk (debounced ringan)
+  // Pencarian produk (di dalam katalog, debounced ringan)
   // ---------------------------------------------------------------------
   function initSearch() {
     const input = qs("#productSearch");
@@ -154,6 +241,23 @@
         searchTerm = input.value;
         renderProducts();
       }, 120);
+    });
+  }
+
+  // Pencarian di header: langsung lompat ke katalog + isi kata kunci
+  function initHeaderSearch() {
+    const form = qs("#headerSearchForm");
+    if (!form) return;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = qs("#headerSearchInput").value;
+      const target = qs("#productSearch");
+      if (target) {
+        target.value = val;
+        searchTerm = val;
+        renderProducts();
+      }
+      qs("#katalog").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 
@@ -181,7 +285,8 @@
   }
 
   // ---------------------------------------------------------------------
-  // Header menyusut saat scroll + tombol kembali ke atas
+  // Header menyusut saat scroll, tombol kembali ke atas, tandai tab
+  // kategori aktif di category-bar sesuai section yang terlihat
   // ---------------------------------------------------------------------
   function initScrollEffects() {
     const header = qs("#siteHeader");
@@ -198,15 +303,35 @@
   }
 
   // ---------------------------------------------------------------------
-  // Reveal saat scroll (dimatikan otomatis kalau prefers-reduced-motion)
+  // Reveal saat scroll + hitung angka statistik (dimatikan otomatis
+  // kalau prefers-reduced-motion)
   // ---------------------------------------------------------------------
+  function animateCount(el) {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const suffix = el.dataset.suffix || "";
+    const duration = 900;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   function initReveal() {
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    const targets = qsa(".reveal");
+    const targets = qsa(".reveal, .reveal-scale, .stagger");
+    const counters = qsa("[data-count]");
+
     if (prefersReduced || !("IntersectionObserver" in window)) {
       targets.forEach((el) => el.classList.add("is-visible"));
+      counters.forEach((el) => {
+        el.textContent = (el.dataset.count || "0") + (el.dataset.suffix || "");
+      });
       return;
     }
     const obs = new IntersectionObserver(
@@ -214,13 +339,17 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
+            if (entry.target.hasAttribute("data-count")) {
+              animateCount(entry.target);
+            }
             obs.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.15 }
     );
     targets.forEach((el) => obs.observe(el));
+    counters.forEach((el) => obs.observe(el));
   }
 
   // ---------------------------------------------------------------------
@@ -269,11 +398,16 @@
   }
 
   function init() {
+    initLoader();
+    initScrollProgress();
     renderTabs();
     renderCategoryPanel();
     renderProducts();
+    renderCategoryTiles();
     renderOverview();
     initSearch();
+    initHeaderSearch();
+    initCategoryBarLinks();
     initMobileNav();
     initScrollEffects();
     initReveal();
