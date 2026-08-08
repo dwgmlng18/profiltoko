@@ -334,19 +334,25 @@
       });
       return;
     }
+
+    // rootMargin menggeser "garis pemicu" sedikit ke atas/bawah viewport
+    // supaya elemen sempat benar-benar keluar layar dulu sebelum status
+    // is-visible dicabut — animasi jadi terasa mulus dua arah, bukan
+    // berkedip persis di tepi layar.
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            if (entry.target.hasAttribute("data-count")) {
-              animateCount(entry.target);
-            }
-            obs.unobserve(entry.target);
+          // Toggle dua arah: masuk viewport → animasi muncul,
+          // keluar viewport → status dicabut supaya animasi yang sama
+          // terputar ulang saat elemen itu terlihat lagi (scroll naik
+          // ataupun turun), tanpa perlu refresh halaman.
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+          if (entry.isIntersecting && entry.target.hasAttribute("data-count")) {
+            animateCount(entry.target);
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15, rootMargin: "-4% 0px -4% 0px" }
     );
     targets.forEach((el) => obs.observe(el));
     counters.forEach((el) => obs.observe(el));
